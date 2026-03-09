@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard | HYoMM</title>
+
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+<h2 class="logo">HYoMM</h2>
+
+<a href="index.html" class="logout">Logout</a>
+
+</header>
+
+<aside class="sidebar" id="sidebar">
+
+<nav class="menu">
+
+<a href="#">Dashboard</a> <a href="#">Skills</a> <a href="#">Certificates</a>
+
+<a href="#">Projects</a> <a href="portfolio.html">View Portfolio</a>
+
+</nav>
+
+</aside>
+
+<main class="main">
+
+<h1>Dashboard</h1>
+
+<section class="cards">
+
+<div class="card">
+<h3>Skills</h3>
+<p>Manage your professional skills</p>
+</div>
+
+<div class="card">
+<h3>Certificates</h3>
+<p>Upload and manage certificates</p>
+</div>
+
+<div class="card">
+<h3>Projects</h3>
+<p>Showcase your projects</p>
+</div>
+<section class="dashboard-sections">
+
+<div class="section-box">
+<h2>Add Skill</h2>
+
+<input type="text" placeholder="Skill name">
+<select>
+<option>Level</option>
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+
+<button>Add Skill</button>
+
+</div>
+
+<div class="section-box">
+<h2>Upload Certificate</h2>
+
+<input type="text" placeholder="Certificate title">
+<input type="file">
+
+<button>Upload</button>
+
+</div>
+
+<div class="section-box">
+<h2>Add Project</h2>
+
+<input type="text" placeholder="Project name">
+<input type="text" placeholder="Project link">
+
+<button>Add Project</button>
+
+</div>
+
+</section>
+
+
+</section>
+
+</main>
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+<h3>HYoMM</h3>
+<p>A platform for building professional digital portfolios.</p>
+</div>
+
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="#">Dashboard</a></li>
+<li><a href="#">Skills</a></li>
+<li><a href="#">Projects</a></li>
+</ul>
+</div>
+
+<div>
+<h4>Contact</h4>
+<p>Email: support@hyomm.com</p>
+<p>Location: India</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 HYoMM. All Rights Reserved.</p>
+</div>
+
+</footer>
+
+
+<script>
+
+function toggleMenu(){
+document.getElementById("sidebar").classList.toggle("open");
+}
+
+</script>
+<script>
+
+// apply saved theme when page loads
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+}
+
+// toggle theme
+const toggle = document.getElementById("themeToggle");
+
+if(toggle){
+toggle.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+    localStorage.setItem("theme","dark");
+}else{
+    localStorage.setItem("theme","light");
+}
+
+});
+}
+
+</script>
+
+</body>
+</html>

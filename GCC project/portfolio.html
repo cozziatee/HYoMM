@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | HYoMM</title>
+
+<link rel="stylesheet" href="css/portfolio.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<header class="topbar">
+
+<h2 class="logo">HYoMM</h2>
+
+<a href="dashboard.html" class="back">← Back to Dashboard</a>
+
+</header>
+
+<section class="profile">
+
+<div class="profile-card">
+
+<div class="avatar">U</div>
+
+<h1>User Name</h1>
+
+<p>Web Developer • Designer • Creator</p>
+
+</div>
+
+</section>
+
+<section class="portfolio-section">
+
+<h2>Skills</h2>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">HTML</div>
+<div class="portfolio-card">CSS</div>
+<div class="portfolio-card">JavaScript</div>
+<div class="portfolio-card">UI Design</div>
+
+</div>
+
+</section>
+
+<section class="portfolio-section">
+
+<h2>Certificates</h2>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">Web Development Certificate</div>
+<div class="portfolio-card">Networking Certificate</div>
+<div class="portfolio-card">Python Certificate</div>
+
+</div>
+
+</section>
+
+<section class="portfolio-section">
+
+<h2>Projects</h2>
+
+<div class="portfolio-grid">
+
+<div class="portfolio-card">Portfolio Website</div>
+<div class="portfolio-card">Student Management System</div>
+<div class="portfolio-card">Networking Study Portal</div>
+
+</div>
+
+</section>
+
+<footer class="footer">
+
+<p>© 2026 HYoMM • Digital Portfolio Platform</p>
+
+</footer>
+<script>
+
+// apply saved theme when page loads
+if(localStorage.getItem("theme") === "dark"){
+    document.body.classList.add("dark-mode");
+}
+
+// toggle theme
+const toggle = document.getElementById("themeToggle");
+
+if(toggle){
+toggle.addEventListener("click", () => {
+
+document.body.classList.toggle("dark-mode");
+
+if(document.body.classList.contains("dark-mode")){
+    localStorage.setItem("theme","dark");
+}else{
+    localStorage.setItem("theme","light");
+}
+
+});
+}
+
+</script>
+
+</body>
+</html>
